@@ -29,7 +29,7 @@ def arr_image_z1(num):
 
 def label_image_z1(num):
     matrix = np.zeros(10000)
-    matrix[num+1] = 1
+    matrix[num + 1] = 1
     matrix = matrix.reshape([1, 10000])
     matrix.astype(np.float32)
     return matrix
