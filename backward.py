@@ -6,9 +6,9 @@ import forward
 import os
 
 BATCH_SIZE = 1                # 定义每轮喂入神经网络多少张图片
-LEARNING_RATE_BASE = 5.00     # 学习率0.01
+LEARNING_RATE_BASE = 1.00     # 学习率0.01
 LEARNING_RATE_DECAY = 0.99    # 衰减率0.99
-REGULARIZER = 0.01            # 正则化系数0.0001
+REGULARIZER = 0.001           # 正则化系数0.0001
 STEPS = file.Z1_IMAGE         # 训练轮数为图片个数
 MOVING_AVERAGE_DECAY = 0.99   # 滑动平均衰减率0.99
 MODEL_SAVE_PATH = "./model/"  # 模型保存路径
@@ -61,7 +61,7 @@ def backward():  # backward函数中读入图片数据
                                            feed_dict={x: xs, y_: ys})
 
             print("After %d training steps, loss on training batch is %g" % (step, loss_value))
-            if i % 200 == 0:
+            if i % 100 == 0:
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
 
 
