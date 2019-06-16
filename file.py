@@ -29,7 +29,7 @@ def arr_image_z1(num):
 
 def input_data_z1():
     for i in range(1, Z1_IMAGE+1):
-        arr = arr_image_z1(i)
+        arr_image_z1(i)
 
 
 def main():
