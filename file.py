@@ -27,9 +27,18 @@ def arr_image_z1(num):
         return arr_ready
 
 
+def label_image_z1(num):
+    matrix = np.zeros(10000)
+    matrix[num+1] = 1
+    matrix = matrix.reshape([1, 10000])
+    matrix.astype(np.float32)
+    return matrix
+
+
 def input_data_z1():
     for i in range(1, Z1_IMAGE+1):
         arr_image_z1(i)
+        label_image_z1(i)
 
 
 def main():

@@ -4,8 +4,8 @@ import tensorflow as tf
 
 # 定义神经网络的相关参数
 INPUT_NODE = 1440000  # 每张图1200*1200个像素点
-OUTPUT_NODE = 1440000  # 输出相同像素点1200*1200个
-LAYER_NODE = 100  # 隐藏层节点个数1,000,000个
+OUTPUT_NODE = 10000   # 输出时间
+LAYER_NODE = 100      # 隐藏层节点个数1,000,000个
 # 1000会超过最大资源
 
 

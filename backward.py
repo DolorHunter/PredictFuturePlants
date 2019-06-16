@@ -6,11 +6,11 @@ import forward
 import os
 
 BATCH_SIZE = 1                # 定义每轮喂入神经网络多少张图片
-LEARNING_RATE_BASE = 1.00     # 学习率0.01
-LEARNING_RATE_DECAY = 0.99    # 衰减率0.99
-REGULARIZER = 0.001           # 正则化系数0.0001
+LEARNING_RATE_BASE = 5.00     # 学习率[初次启动1.00获得首个点数据->转5.00]
+LEARNING_RATE_DECAY = 0.99    # 衰减率
+REGULARIZER = 0.0001           # 正则化系数
 STEPS = file.Z1_IMAGE         # 训练轮数为图片个数
-MOVING_AVERAGE_DECAY = 0.99   # 滑动平均衰减率0.99
+MOVING_AVERAGE_DECAY = 0.99   # 滑动平均衰减率
 MODEL_SAVE_PATH = "./model/"  # 模型保存路径
 MODEL_NAME = "model"          # 模型se保存文件名
 
@@ -54,8 +54,7 @@ def backward():  # backward函数中读入图片数据
         for i in range(STEPS):  # 用for循环迭代steps轮
             # 每次读入图片和序号，喂入神经网络进行训练
             xs = file.arr_image_z1(STEPS)
-            ys = file.arr_image_z1(STEPS)
-            # xs, ys = mnist.train.next_batch(BATCH_SIZE)
+            ys = file.label_image_z1(STEPS)
             # 训练，得到损失和步骤，输入为xs, ys
             _, loss_value, step = sess.run([train_op, loss, global_step],
                                            feed_dict={x: xs, y_: ys})
