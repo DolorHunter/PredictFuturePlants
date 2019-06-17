@@ -29,16 +29,32 @@ def test():
 				if ckpt and ckpt.model_checkpoint_path:
 					saver.restore(sess, ckpt.model_checkpoint_path)
 					global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
+
+					###############################################################
+
+					'''
 					# 测试集数据计算准确度
 					accuracy = 0
 					for i in range(1, file.Z1_TEST_IMAGE + 1):
 						test_label = file.label_image_z1(file.Z1_IMAGE + i)
 						test_image = file.arr_image_z1(file.Z1_IMAGE + i)
-						if(sess.run())
-					accuracy_score =
+						y = forward.forward(test_label, None)
+						if test_image[int(y)] == 1:
+							accuracy += 1
+					accuracy_score = accuracy / file.Z1_TEST_IMAGE
+					'''
+					y_ =
+					xs_test_label = file.label_image_z1(file.Z1_TEST_IMAGE)
+					ys_test_image = file.arr_image_z1(file.Z1_TEST_IMAGE)
+					accuracy_score = sess.run(accuracy, feed_dict={x: xs_test_label, y_: ys_test_image})
 
+					correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
+					accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
+					print "accuracy", sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels})
 
-					accuracy_score = sess.run(accuracy, feed_dict={x: test_label, y_: test_image})
+					# accuracy_score = sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels})
+
+					###############################################################
 
 					print("After %s training step(s), test accuracy = %g" % (global_step, accuracy_score))
 				else:
