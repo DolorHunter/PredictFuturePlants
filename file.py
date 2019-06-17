@@ -7,7 +7,8 @@ ROW_SIZE = 1200
 COL_SIZE = 1200
 TIME_SIZE = 10000
 Z1_LOC = '.\\data\\Z1\\Z1-'
-Z1_IMAGE = 212
+Z1_IMAGE = 200          # 前200张图作为训练集
+Z1_TEST_IMAGE = 12      # 后12张图作为测试集
 
 
 # Convert image to array[1*1440000] in float32
