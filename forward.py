@@ -1,10 +1,11 @@
 # coding=utf-8
 
 import tensorflow as tf
+import file
 
 # 定义神经网络的相关参数
-INPUT_NODE = 1440000  # 每张图1200*1200个像素点
-OUTPUT_NODE = 10000   # 输出时间
+INPUT_NODE = file.TIME_SIZE  # 输入时间轴长度
+OUTPUT_NODE = 1440000  # 每张图1200*1200个像素点
 LAYER_NODE = 5        # 隐藏层节点个数
 
 

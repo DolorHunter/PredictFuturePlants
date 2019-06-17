@@ -5,6 +5,7 @@ from PIL import Image
 
 ROW_SIZE = 1200
 COL_SIZE = 1200
+TIME_SIZE = 10000
 Z1_LOC = '.\\data\\Z1\\Z1-'
 Z1_IMAGE = 212
 
@@ -28,13 +29,14 @@ def arr_image_z1(num):
 
 
 def label_image_z1(num):
-    matrix = np.zeros(10000)
+    matrix = np.zeros(TIME_SIZE)
     matrix[num + 1] = 1
-    matrix = matrix.reshape([1, 10000])
+    matrix = matrix.reshape([1, TIME_SIZE])
     matrix.astype(np.float32)
     return matrix
 
 
+# TEST
 def input_data_z1():
     for i in range(1, Z1_IMAGE+1):
         arr_image_z1(i)

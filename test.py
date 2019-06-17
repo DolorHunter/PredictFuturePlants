@@ -1,9 +1,10 @@
-#coding:utf-8
+# coding=utf-8
 
 import time
 import tensorflow as tf
 import forward
 import backward
+
 TEST_INTERVAL_SECS = 5
 
 

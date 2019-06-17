@@ -1,4 +1,4 @@
-#coding:utf-8
+# coding=utf-8
 
 import tensorflow as tf
 import file
@@ -15,7 +15,8 @@ MODEL_SAVE_PATH = "./model/"  # 模型保存路径
 MODEL_NAME = "model"          # 模型se保存文件名
 
 
-def backward():  # backward函数中读入图片数据
+# backward函数中读入图片数据
+def backward():
     x = tf.placeholder(tf.float32, [None, forward.INPUT_NODE])  # 用placeholder给x占位
     y_ = tf.placeholder(tf.float32, [None, forward.OUTPUT_NODE])  # 用placeholder给y_占位
     y = forward.forward(x, REGULARIZER)  # 用前向传播函数计算输出y
@@ -53,13 +54,13 @@ def backward():  # backward函数中读入图片数据
 
         for i in range(STEPS):  # 用for循环迭代steps轮
             # 每次读入图片和序号，喂入神经网络进行训练
-            xs = file.arr_image_z1(STEPS % file.Z1_IMAGE + 1)
-            ys = file.label_image_z1(STEPS % file.Z1_IMAGE + 1)
+            xs = file.label_image_z1((STEPS % file.Z1_IMAGE) + 1)
+            ys = file.arr_image_z1((STEPS % file.Z1_IMAGE) + 1)
             # 训练，得到损失和步骤，输入为xs, ys
             _, loss_value, step = sess.run([train_op, loss, global_step],
                                            feed_dict={x: xs, y_: ys})
 
-            if i % 50 == 0:
+            if i % 100 == 0:
                 print("After %d training steps, loss on training batch is %g" % (step, loss_value))
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
     return loss_value
