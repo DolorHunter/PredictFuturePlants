@@ -22,7 +22,7 @@ def backward():
     y = forward.forward(x, REGULARIZER)  # 用前向传播函数计算输出y
     global_step = tf.Variable(0, trainable=False)  # 给轮数计数器global_step赋初值，定义为不可训练
 
-    ce = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y, labels=tf.arg_max(y_, 1))
+    ce = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y, labels=y_)
     cem = tf.reduce_mean(ce)
     loss = cem + tf.add_n(tf.get_collection('losses'))  # 调用包含正则化的损失函数loss
 
