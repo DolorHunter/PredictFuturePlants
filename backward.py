@@ -24,7 +24,8 @@ def backward():
 
     ce = 0
     for i in range(file.ROW_SIZE * file.COL_SIZE):
-        ce += tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y, labels=y_)  # 张量类型转化为binary或unicode
+        # ce += tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y[0, i], labels=y_[0, i])  # 张量类型转化为binary或unicode
+        ce += abs(y_[0, i] - y[0, i])  # new ce
     cem = tf.reduce_mean(ce)
     loss = cem + tf.add_n(tf.get_collection('losses'))  # 调用包含正则化的损失函数loss
 
@@ -64,6 +65,7 @@ def backward():
 
             if i % 1 == 0:
                 print("After %d training steps, loss on training batch is %g" % (step, loss_value))
+            if i % 100 == 0:
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
     return loss_value
 
