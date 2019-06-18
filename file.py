@@ -3,8 +3,8 @@
 import numpy as np
 from PIL import Image
 
-ROW_SIZE = 36
-COL_SIZE = 36
+ROW_SIZE = 12
+COL_SIZE = 12
 TIME_SIZE = 10000
 Z1_LOC = '.\\data\\Z1\\Z1-'
 Z1_IMAGE = 200          # 前200张图作为训练集
@@ -23,7 +23,7 @@ def arr_image_z1(num):
         im = Image.open(Z1_LOC + str_num + '.tif')
         im = im.resize((ROW_SIZE, COL_SIZE), Image.ANTIALIAS)
         im_arr = np.array(im.convert('L'))  # Convert to array
-        nm_arr = im_arr.reshape([1, 1296])
+        nm_arr = im_arr.reshape([1, ROW_SIZE*COL_SIZE])
         nm_arr = nm_arr.astype(np.float32)
         arr_ready = np.multiply(nm_arr, 1/255)
         return arr_ready

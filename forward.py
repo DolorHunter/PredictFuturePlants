@@ -35,5 +35,8 @@ def forward(x, regularizer):
         b2 = get_bias([OUTPUT_NODE])
         y.append(tf.matmul(y1, w2) + b2)
     y = np.array(y)
+    y = np.array(y.convert('L'))
     y = y.reshape([1, file.ROW_SIZE * file.COL_SIZE])
+    y = y.astype(np.float32)
+    y = np.multiply(y, 1 / 255)
     return y   # 因为要对输出使用softmax函数，使它符合概率分布，所以输出y不过value函数
