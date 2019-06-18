@@ -12,7 +12,6 @@ def restore_model(time):
 	with tf.Graph().as_default() as tg:
 		x = tf.placeholder(tf.float32, [None, forward.INPUT_NODE])
 		y = forward.forward(x, None)
-		# pre_value = tf.argmax(y, 1)
 
 		variable_averages = tf.trainExponentialMovingAverage(backward.MOVING_AVERAGE_DEcAY)
 		variables_to_restore = variable_averages.variables_to_restore()

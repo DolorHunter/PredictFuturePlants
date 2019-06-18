@@ -22,6 +22,8 @@ def backward():
     y = forward.forward(x, REGULARIZER)  # 用前向传播函数计算输出y
     global_step = tf.Variable(0, trainable=False)  # 给轮数计数器global_step赋初值，定义为不可训练
 
+    print("123")
+
     ce = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y, labels=y_)
     cem = tf.reduce_mean(ce)
     loss = cem + tf.add_n(tf.get_collection('losses'))  # 调用包含正则化的损失函数loss
@@ -60,7 +62,7 @@ def backward():
             _, loss_value, step = sess.run([train_op, loss, global_step],
                                            feed_dict={x: xs, y_: ys})
 
-            if i % 100 == 0:
+            if i % 1 == 0:
                 print("After %d training steps, loss on training batch is %g" % (step, loss_value))
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
     return loss_value

@@ -6,7 +6,7 @@ import file
 
 # 定义神经网络的相关参数
 INPUT_NODE = file.TIME_SIZE  # 输入时间轴长度
-OUTPUT_NODE = 1440000  # 每张图1200*1200个像素点
+OUTPUT_NODE = file.ROW_SIZE*file.COL_SIZE  # 每张图像素点
 LAYER_NODE = 5        # 隐藏层节点个数
 
 
@@ -36,5 +36,4 @@ def forward(x, regularizer):
         y.append(tf.matmul(y1, w2) + b2)
     y = np.array(y)
     y = y.reshape([1, file.ROW_SIZE * file.COL_SIZE])
-    y.astype(np.float32)
     return y   # 因为要对输出使用softmax函数，使它符合概率分布，所以输出y不过value函数
