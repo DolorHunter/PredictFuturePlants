@@ -19,8 +19,8 @@ def test():
 		ema = tf.train.ExponentialMovingAverage(backward.MOVING_AVERAGE_DECAY)
 		ema_restore = ema.variables_to_restore()
 		saver = tf.train.Saver(ema_restore)
-
-		correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
+		# tf.argmax(y, 1), tf.argmax(y_, 1)
+		correct_prediction = tf.equal(y_[0, :], y[0, :])  # 和相等即为预测正确
 		accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 		while True:
@@ -29,9 +29,6 @@ def test():
 				if ckpt and ckpt.model_checkpoint_path:
 					saver.restore(sess, ckpt.model_checkpoint_path)
 					global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
-
-					###############################################################
-
 					'''
 					# 测试集数据计算准确度
 					accuracy = 0
@@ -43,14 +40,9 @@ def test():
 							accuracy += 1
 					accuracy_score = accuracy / file.Z1_TEST_IMAGE
 					'''
-					y_ =
 					xs_test_label = file.label_image_z1(file.Z1_TEST_IMAGE)
 					ys_test_image = file.arr_image_z1(file.Z1_TEST_IMAGE)
 					accuracy_score = sess.run(accuracy, feed_dict={x: xs_test_label, y_: ys_test_image})
-
-					correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
-					accuracy = tf.reduce_mean(tf.cast(correct_prediction, "float"))
-					print "accuracy", sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels})
 
 					# accuracy_score = sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels})
 

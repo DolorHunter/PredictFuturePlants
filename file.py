@@ -3,8 +3,8 @@
 import numpy as np
 from PIL import Image
 
-ROW_SIZE = 36  # 12 [test size]
-COL_SIZE = 36  # 12 [test size]
+ROW_SIZE = 12  # 36 [test size] 12
+COL_SIZE = 12  # 36 [test size] 12
 TIME_SIZE = 10000
 Z1_LOC = '.\\data\\Z1\\Z1-'
 Z1_IMAGE = 200          # 前200张图作为训练集

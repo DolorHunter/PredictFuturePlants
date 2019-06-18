@@ -63,9 +63,8 @@ def backward():
             _, loss_value, step = sess.run([train_op, loss, global_step],
                                            feed_dict={x: xs, y_: ys})
 
-            if i % 1 == 0:
-                print("After %d training steps, loss on training batch is %g" % (step, loss_value))
             if i % 100 == 0:
+                print("After %d training steps, loss on training batch is %g" % (step, loss_value))
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
     return loss_value
 

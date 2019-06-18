@@ -22,8 +22,8 @@ def restore_model(time):
 			if ckpt and ckpt.model_checkpoint_path:
 				saver.restore(sess, ckpt.model_checkpoint_path)
 
-				pre_value = sess.run(y, feed_dict={x: time})
-				return pre_value
+				pre_array = sess.run(y, feed_dict={x: time})
+				return pre_array
 			else:
 				print("No checkpoint file found")
 				return -1
