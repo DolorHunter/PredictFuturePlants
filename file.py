@@ -37,16 +37,8 @@ def label_image_z1(num):
     return matrix
 
 
-# TEST
-def input_data_z1():
-    for i in range(1, Z1_IMAGE+1):
-        arr_image_z1(i)
-        label_image_z1(i)
-
-
 def main():
-    input_data_z1()
-    return 0
+    print("hello world.")
 
 
 if __name__ == '__main__':

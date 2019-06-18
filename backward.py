@@ -6,7 +6,7 @@ import forward
 import os
 
 BATCH_SIZE = 1                # 定义每轮喂入神经网络多少张图片
-LEARNING_RATE_BASE = 0.1      # 学习率
+LEARNING_RATE_BASE = 0.5      # 学习率
 LEARNING_RATE_DECAY = 0.99    # 衰减率
 REGULARIZER = 0.001           # 正则化系数
 STEPS = 30000                 # 训练轮数
@@ -63,8 +63,8 @@ def backward():
             _, loss_value, step = sess.run([train_op, loss, global_step],
                                            feed_dict={x: xs, y_: ys})
 
-            if i % 100 == 0:
-                print("After %d training steps, loss on training batch is %g" % (step, loss_value))
+            print("After %d training steps, loss on training batch is %g" % (step, loss_value))
+            if i % 1000 == 0:
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
     return loss_value
 

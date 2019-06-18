@@ -34,7 +34,6 @@ def forward(x, regularizer):
         w2 = get_weight([LAYER_NODE, OUTPUT_NODE], regularizer)
         b2 = get_bias([OUTPUT_NODE])
         y.append(tf.matmul(y1, w2) + b2)
-        print(i)  # test
     y_arr = np.array(y)
     y_arr = y_arr.reshape([1, file.ROW_SIZE * file.COL_SIZE])
     # y_arr = y_arr.astype(np.float32)
