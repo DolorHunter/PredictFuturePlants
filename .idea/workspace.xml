@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb10d59f-4446-4fd8-b3d4-24e6187d6948" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backward.py" beforeDir="false" afterPath="$PROJECT_DIR$/backward.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/file.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forward.py" beforeDir="false" afterPath="$PROJECT_DIR$/forward.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="247">
@@ -40,11 +39,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/forward.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="51" />
+            <state relative-caret-position="36">
+              <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
               <folding>
                 <element signature="e#16#39#0" expanded="true" />
               </folding>
@@ -55,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backward.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="285">
+              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -64,8 +63,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+            <state relative-caret-position="494">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="42" />
               <folding>
                 <element signature="e#16#34#0" expanded="true" />
               </folding>
@@ -93,13 +92,13 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/backward.py" />
         <option value="$PROJECT_DIR$/file.py" />
+        <option value="$PROJECT_DIR$/backward.py" />
         <option value="$PROJECT_DIR$/forward.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="1588" />
     <option name="width" value="1625" />
     <option name="height" value="1812" />
@@ -288,7 +287,7 @@
       <workItem from="1560673891215" duration="6571000" />
       <workItem from="1560683626863" duration="4214000" />
       <workItem from="1560739794491" duration="7493000" />
-      <workItem from="1560839710467" duration="6284000" />
+      <workItem from="1560839710467" duration="14210000" />
     </task>
     <task id="LOCAL-00001" summary="0616 - Creat backward &amp; forward">
       <created>1560676345507</created>
@@ -367,23 +366,37 @@
       <option name="project" value="LOCAL" />
       <updated>1560846900087</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="0618 - Fix the error in forward[3]">
+      <created>1560848505038</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560848505038</updated>
+    </task>
+    <task id="LOCAL-00013" summary="0618 - Fix the error in forward[3.1]test">
+      <created>1560851953515</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1560851953515</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42228000" />
+    <option name="totallyTimeSpent" value="50154000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1435" height="812" extended-state="6" />
+    <frame x="706" y="0" width="722" height="805" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.44144145" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.15615615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.496997" visible="true" weight="0.2536657" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39940828" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.496997" visible="true" weight="0.30962962" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39851853" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -412,7 +425,9 @@
     <MESSAGE value="0617 - Update daily report in README" />
     <MESSAGE value="0618 - Fix the error in forward" />
     <MESSAGE value="0618 - Fix the error in forward[2]" />
-    <option name="LAST_COMMIT_MESSAGE" value="0618 - Fix the error in forward[2]" />
+    <MESSAGE value="0618 - Fix the error in forward[3]" />
+    <MESSAGE value="0618 - Fix the error in forward[3.1]test" />
+    <option name="LAST_COMMIT_MESSAGE" value="0618 - Fix the error in forward[3.1]test" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/model_build_B$test.coverage" NAME="test Coverage Results" MODIFIED="1560755725763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -420,7 +435,7 @@
     <SUITE FILE_PATH="coverage/model_build_B$app.coverage" NAME="app Coverage Results" MODIFIED="1560841678130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/model_build_B$file.coverage" NAME="file Coverage Results" MODIFIED="1560670102018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/model_build_B$backward__1_.coverage" NAME="backward (1) Coverage Results" MODIFIED="1560671068292" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Sample" />
-    <SUITE FILE_PATH="coverage/model_build_B$backward.coverage" NAME="backward Coverage Results" MODIFIED="1560848425221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/model_build_B$backward.coverage" NAME="backward Coverage Results" MODIFIED="1560860836567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/tokenize.py">
@@ -467,10 +482,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/tensorflow/python/util/compat.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="2628" selection-start-line="2628" selection-end-line="2628" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        <state relative-caret-position="494">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="42" />
           <folding>
             <element signature="e#16#34#0" expanded="true" />
           </folding>
@@ -479,8 +508,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backward.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forward.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <folding>
+            <element signature="e#16#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -488,16 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding>
-            <element signature="e#16#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forward.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="51" />
           <folding>
             <element signature="e#16#39#0" expanded="true" />
           </folding>

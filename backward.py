@@ -24,7 +24,7 @@ def backward():
 
     ce = 0
     for i in range(file.ROW_SIZE * file.COL_SIZE):
-        ce += tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y[i], labels=y_[i])
+        ce += tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y, labels=y_)  # 张量类型转化为binary或unicode
     cem = tf.reduce_mean(ce)
     loss = cem + tf.add_n(tf.get_collection('losses'))  # 调用包含正则化的损失函数loss
 
