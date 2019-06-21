@@ -22,12 +22,10 @@ def backward():
     y = forward.forward(x, REGULARIZER)  # 用前向传播函数计算输出y
     global_step = tf.Variable(0, trainable=False)  # 给轮数计数器global_step赋初值，定义为不可训练
 
-    ce = 0
+    loss_mse = 0
     for i in range(file.ROW_SIZE * file.COL_SIZE):
-        # ce += tf.nn.sparse_softmax_cross_entropy_with_logits(logits=y[0, i], labels=y_[0, i])  # 张量类型转化为binary或unicode
-        ce += abs(y_[0, i] - y[0, i])  # new ce
-    cem = tf.reduce_mean(ce)
-    loss = cem + tf.add_n(tf.get_collection('losses'))  # 调用包含正则化的损失函数loss
+        loss_mse += tf.reduce_mean(tf.square(y_[0, i] - y[0, i]))
+    loss = loss_mse + tf.add_n(tf.get_collection('losses'))  # 调用包含正则化的损失函数loss
 
     learning_rate = tf.train.exponential_decay(  # 定义指数衰减学习率
         LEARNING_RATE_BASE,
