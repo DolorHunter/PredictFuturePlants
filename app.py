@@ -43,7 +43,8 @@ def image_arr(time):
 
 
 def main():
-	time = int(input("Input the time:"))
+	time = 1  # 1 for test
+	# int(input("Input the time:"))
 	image_arr(time)
 
 
