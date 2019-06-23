@@ -30,11 +30,12 @@ def arr_image_z1(num):
 
 
 def label_image_z1(num):
-    matrix = np.zeros(TIME_SIZE)
-    matrix[num + 1] = 1
-    matrix = matrix.reshape([1, TIME_SIZE])
-    matrix.astype(np.float32)
-    return matrix
+    label = np.zeros(TIME_SIZE)
+    label[num] = 1
+    print(label)
+    label = label.reshape([1, TIME_SIZE])
+    label.astype(np.float32)
+    return label
 
 
 def main():
