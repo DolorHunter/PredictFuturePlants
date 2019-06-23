@@ -11,7 +11,7 @@ Z1_IMAGE = 200          # 前200张图作为训练集
 Z1_TEST_IMAGE = 12      # 后12张图作为测试集
 
 
-# Convert image to array[1*1296] in float32
+# Convert image to array[1*4096] in float32
 def arr_image_z1(num):
     if num >= 1000:
         print("Too many image! Maximum scale is 999.")
