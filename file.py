@@ -6,7 +6,7 @@ from PIL import Image
 ROW_SIZE = 64
 COL_SIZE = 64
 TIME_SIZE = 500
-Z1_LOC = '.\\data\\Z1\\Z1-'
+Z1_PATH = '.\\data\\Z1\\Z1-'
 Z1_IMAGE = 200          # 前200张图作为训练集
 Z1_TEST_IMAGE = 12      # 后12张图作为测试集
 
@@ -20,7 +20,7 @@ def arr_image_z1(num):
         tens = int((num / 10) % 10)
         hundreds = int((num / 100) % 10)
         str_num = chr(hundreds + 48) + chr(tens + 48) + chr(units + 48)
-        im = Image.open(Z1_LOC + str_num + '.tif')
+        im = Image.open(Z1_PATH + str_num + '.tif')
         im = im.resize((ROW_SIZE, COL_SIZE), Image.ANTIALIAS)
         im_arr = np.array(im.convert('L'))  # Convert to array
         nm_arr = im_arr.reshape([1, ROW_SIZE*COL_SIZE])

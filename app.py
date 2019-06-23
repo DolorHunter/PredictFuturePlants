@@ -10,6 +10,8 @@ import backward
 import file
 
 
+Z1_PREDICT_PATH = '.\\predict\\Z1\\Z1-'
+
 def restore_model(time):
     with tf.Graph().as_default() as tg:
         x = tf.placeholder(tf.float32, [None, forward.INPUT_NODE])
@@ -44,7 +46,7 @@ def image_arr(time):
     arr_ready = cv2.resize(arr, new_dimension, interpolation=cv2.INTER_LANCZOS4)  # 8x8像素邻域的Lanczos插值
     im = Image.fromarray(arr_ready)  # 展示当前图片
     plt.show(im)
-    im.save(file.Z1_LOC + str(time) + ".tif")
+    im.save(Z1_PREDICT_PATH + str(time) + ".tif")
 
 
 def main():
