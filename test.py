@@ -14,14 +14,18 @@ def test():
 	with tf.Graph().as_default() as g:
 		x = tf.placeholder(tf.float32, [None, forward.INPUT_NODE])
 		y_= tf.placeholder(tf.float32, [None, forward.OUTPUT_NODE])
-		y = forward.forward(x, None)
+		y = forward.forward(x, 0)
 
 		ema = tf.train.ExponentialMovingAverage(backward.MOVING_AVERAGE_DECAY)
 		ema_restore = ema.variables_to_restore()
 		saver = tf.train.Saver(ema_restore)
-		# tf.argmax(y, 1), tf.argmax(y_, 1)
-		#for i in range(file.ROW_SIZE * file.COL_SIZE):
-		correct_prediction = tf.equal(y_[:], y[:])  # 和相等即为预测正确
+
+		sum_y = tf.reduce_sum(y_)  # 降维求和
+		sum_y_= tf.reduce_sum(y)  # 降维求和
+		equal = True
+		if sum_y - sum_y_ > 1.0:
+			equal = False
+		correct_prediction = equal  # 和相等即为预测正确
 		accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 		while True:
@@ -31,14 +35,10 @@ def test():
 					saver.restore(sess, ckpt.model_checkpoint_path)
 					global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
 
-
-					xs_test_label = file.label_image_z1(file.Z1_TEST_IMAGE)
-					ys_test_image = file.arr_image_z1(file.Z1_TEST_IMAGE)
-					accuracy_score = sess.run(accuracy, feed_dict={x: xs_test_label, y_: ys_test_image})
-
-					# accuracy_score = sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels})
-
-					###############################################################
+					for i in range(file.Z1_TEST_IMAGE):
+						xs_test_label = file.label_image_z1(file.Z1_TEST_IMAGE + i + 1)
+						ys_test_image = file.arr_image_z1(file.Z1_TEST_IMAGE + i + 1)
+						accuracy_score = sess.run(accuracy, feed_dict={x: xs_test_label, y_: ys_test_image})
 
 					print("After %s training step(s), test accuracy = %g" % (global_step, accuracy_score))
 				else:
