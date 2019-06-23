@@ -3,6 +3,7 @@
 import tensorflow as tf
 import numpy as np
 from PIL import Image
+import matplotlib.pyplot as plt
 import cv2
 import forward
 import backward
@@ -41,7 +42,8 @@ def image_arr(time):
     arr = np.multiply(arr, 255)
     new_dimension = (1200, 1200)
     arr_ready = cv2.resize(arr, new_dimension, interpolation=cv2.INTER_LANCZOS4)  # 8x8像素邻域的Lanczos插值
-    im = Image.fromarray(arr_ready)
+    im = Image.fromarray(arr_ready)  # 展示当前图片
+    plt.show(im)
     im.save(file.Z1_LOC + str(time) + ".tif")
 
 
