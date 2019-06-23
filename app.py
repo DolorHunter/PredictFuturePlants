@@ -50,7 +50,7 @@ def image_arr(time):
 
 
 def main():
-    time = 230  # int(input("Input the time:"))
+    time = int(input("Input the time:"))
     image_arr(time)
 
 

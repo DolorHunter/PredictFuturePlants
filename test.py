@@ -6,7 +6,7 @@ import forward
 import backward
 import file
 
-TEST_INTERVAL_SECS = 5
+TEST_INTERVAL_SECS = 60
 
 
 # 用于实时监测准确度的测试程序

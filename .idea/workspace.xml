@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cb10d59f-4446-4fd8-b3d4-24e6187d6948" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,20 +15,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+            <state relative-caret-position="494">
+              <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -67,7 +57,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
+            <state relative-caret-position="152">
               <caret line="8" column="27" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="27" />
               <folding>
                 <element signature="e#16#34#0" expanded="true" />
@@ -104,9 +94,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
-    <option name="width" value="1625" />
-    <option name="height" value="1812" />
+    <option name="x" value="-16" />
+    <option name="width" value="1629" />
+    <option name="height" value="1816" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -300,7 +290,7 @@
       <workItem from="1560839710467" duration="17976000" />
       <workItem from="1561115361499" duration="8307000" />
       <workItem from="1561175186612" duration="11460000" />
-      <workItem from="1561258646389" duration="11360000" />
+      <workItem from="1561258646389" duration="14627000" />
     </task>
     <task id="LOCAL-00001" summary="0616 - Creat backward &amp; forward">
       <created>1560676345507</created>
@@ -512,14 +502,28 @@
       <option name="project" value="LOCAL" />
       <updated>1561277956197</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="0623 - Fix approximately equal algorithm">
+      <created>1561279512311</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1561279512311</updated>
+    </task>
+    <task id="LOCAL-00032" summary="0623 - Change to tf.greater_equal()">
+      <created>1561282743077</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1561282743077</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85047000" />
+    <option name="totallyTimeSpent" value="88314000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="0" width="722" height="805" extended-state="0" />
+    <frame x="-6" y="0" width="723" height="806" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.32732734" />
@@ -550,8 +554,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0616 - Creat backward &amp; forward" />
-    <MESSAGE value="0616 - Update LEARNING_RATE" />
     <MESSAGE value="0617 - Update usage in README" />
     <MESSAGE value="0617 - Split IMG to test_img &amp; train_img&#10;&#10;Working on test.py" />
     <MESSAGE value="0617 - Update backward.py&#10;&#10;test.py face a challenge, don't know how thinks done in sess.run()&#10;Perhaps should using app.py to calculate the accuracy instead" />
@@ -575,7 +577,9 @@
     <MESSAGE value="0623 - Add plt.show()" />
     <MESSAGE value="0623 - Change $PATH" />
     <MESSAGE value="0623 - Add approximately equal algorithm" />
-    <option name="LAST_COMMIT_MESSAGE" value="0623 - Add approximately equal algorithm" />
+    <MESSAGE value="0623 - Fix approximately equal algorithm" />
+    <MESSAGE value="0623 - Change to tf.greater_equal()" />
+    <option name="LAST_COMMIT_MESSAGE" value="0623 - Change to tf.greater_equal()" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/model_build_B$test.coverage" NAME="test Coverage Results" MODIFIED="1561275617973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -661,13 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/forward.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -694,7 +691,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="152">
           <caret line="8" column="27" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="27" />
           <folding>
             <element signature="e#16#34#0" expanded="true" />
@@ -702,10 +699,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sample/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+        <state relative-caret-position="494">
+          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
