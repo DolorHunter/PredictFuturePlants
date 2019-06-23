@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb10d59f-4446-4fd8-b3d4-24e6187d6948" name="Default Changelist" comment="0623 - Merge yyn's work&#10;&#10;Upload model&#10;Upload essay&#10;Upload predict image(processed)">
+    <list default="true" id="cb10d59f-4446-4fd8-b3d4-24e6187d6948" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yyn建模进度.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +11,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="346">
+                <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -52,6 +64,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -63,7 +76,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,6 +245,7 @@
       <workItem from="1561175186612" duration="11460000" />
       <workItem from="1561258646389" duration="14627000" />
       <workItem from="1561304403038" duration="1222000" />
+      <workItem from="1561310814514" duration="187000" />
     </task>
     <task id="LOCAL-00001" summary="0616 - Creat backward &amp; forward">
       <created>1560676345507</created>
@@ -472,14 +485,22 @@
       <option name="project" value="LOCAL" />
       <updated>1561305013215</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="0624 - Update essay&#10;&#10;Correct some syntax errors and filled up some information.">
+      <created>1561310936856</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1561310936856</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89536000" />
+    <option name="totallyTimeSpent" value="89723000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="724" height="807" extended-state="0" />
+    <frame x="-8" y="0" width="724" height="808" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3248503" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -492,9 +513,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.52395207" weight="0.32890856" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.503003" side_tool="true" visible="true" weight="0.31166914" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.4760479" side_tool="true" visible="true" weight="0.30973452" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
@@ -533,7 +554,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="0617 - Update backward.py&#10;&#10;test.py face a challenge, don't know how thinks done in sess.run()&#10;Perhaps should using app.py to calculate the accuracy instead" />
     <MESSAGE value="0617 - Update daily report in README" />
     <MESSAGE value="0618 - Fix the error in forward" />
     <MESSAGE value="0618 - Fix the error in forward[2]" />
@@ -558,7 +578,8 @@
     <MESSAGE value="0623 - Change to tf.greater_equal()" />
     <MESSAGE value="0623 - Upload final changes&#10;&#10;Upload model&#10;Upload essay&#10;Upload predict image(processed)" />
     <MESSAGE value="0623 - Merge yyn's work&#10;&#10;Upload model&#10;Upload essay&#10;Upload predict image(processed)" />
-    <option name="LAST_COMMIT_MESSAGE" value="0623 - Merge yyn's work&#10;&#10;Upload model&#10;Upload essay&#10;Upload predict image(processed)" />
+    <MESSAGE value="0624 - Update essay&#10;&#10;Correct some syntax errors and filled up some information." />
+    <option name="LAST_COMMIT_MESSAGE" value="0624 - Update essay&#10;&#10;Correct some syntax errors and filled up some information." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/model_build_B$test.coverage" NAME="test Coverage Results" MODIFIED="1561275617973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -578,13 +599,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/file2.py" />
-    <entry file="file://$PROJECT_DIR$/sample/backward.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/backward.py" />
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -602,38 +617,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-001.tif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-002.tif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-003.tif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-004.tif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-005.tif">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/change/forward.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
-          <caret selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="703">
-            <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-001.tif" />
+    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-002.tif" />
+    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-003.tif" />
+    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-004.tif" />
+    <entry file="file://$PROJECT_DIR$/data/Z1/Z1-005.tif" />
+    <entry file="file://$PROJECT_DIR$/change/forward.py" />
     <entry file="file://$USER_HOME$/OneDrive - mail.hfut.edu.cn/文档/Tencent Files/979523212/FileRecv/send 1454/app.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -644,13 +633,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sample/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/sample/test.py" />
     <entry file="file://$PROJECT_DIR$/file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -692,6 +675,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="346">
+            <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
