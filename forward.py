@@ -24,18 +24,12 @@ def get_bias(shape):
 
 
 def forward(x, regularizer):
-    y = []
-    for i in range(file.ROW_SIZE * file.COL_SIZE):
-        # 搭建神经网络，描述从输入到输出的数据流
-        w1 = get_weight([INPUT_NODE, LAYER_NODE], regularizer)
-        b1 = get_bias([LAYER_NODE])
-        y1 = tf.nn.relu(tf.matmul(x, w1) + b1)
+    # 搭建神经网络，描述从输入到输出的数据流
+    w1 = get_weight([INPUT_NODE, LAYER_NODE], regularizer)
+    b1 = get_bias([LAYER_NODE])
+    y1 = tf.nn.relu(tf.matmul(x, w1) + b1)
 
-        w2 = get_weight([LAYER_NODE, OUTPUT_NODE], regularizer)
-        b2 = get_bias([OUTPUT_NODE])
-        y.append(tf.matmul(y1, w2) + b2)
-    y_arr = np.array(y)
-    y_arr = y_arr.reshape([1, file.ROW_SIZE * file.COL_SIZE])
-    y_arr = np.multiply(y_arr, 1 / 255)
-    y_ready = tf.convert_to_tensor(y_arr)
-    return y_ready   # 因为要对输出使用softmax函数，使它符合概率分布，所以输出y不过value函数
+    w2 = get_weight([LAYER_NODE, OUTPUT_NODE], regularizer)
+    b2 = get_bias([OUTPUT_NODE])
+    y = tf.matmul(y1, w2) + b2
+    return y
