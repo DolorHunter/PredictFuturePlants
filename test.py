@@ -21,11 +21,10 @@ def test():
 		saver = tf.train.Saver(ema_restore)
 
 		sum_y = tf.reduce_sum(y_)  # 降维求和
+		sum_y = tf.cast(sum_y, tf.int32)  # 转换类型为int
 		sum_y_= tf.reduce_sum(y)  # 降维求和
-		equal = True
-		if sum_y - sum_y_ > 1.0:
-			equal = False
-		correct_prediction = equal  # 和相等即为预测正确
+		sum_y_ = tf.cast(sum_y_, tf.int32)  # 转换类型为int
+		correct_prediction = tf.equal(sum_y, sum_y_)  # 和相等即为预测正确
 		accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 		while True:

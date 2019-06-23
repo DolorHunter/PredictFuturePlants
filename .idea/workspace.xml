@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="380">
+              <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
               <folding>
                 <element signature="e#16#27#0" expanded="true" />
               </folding>
@@ -300,7 +300,7 @@
       <workItem from="1560839710467" duration="17976000" />
       <workItem from="1561115361499" duration="8307000" />
       <workItem from="1561175186612" duration="11460000" />
-      <workItem from="1561258646389" duration="9997000" />
+      <workItem from="1561258646389" duration="11360000" />
     </task>
     <task id="LOCAL-00001" summary="0616 - Creat backward &amp; forward">
       <created>1560676345507</created>
@@ -505,11 +505,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561274923618</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="0623 - Add approximately equal algorithm">
+      <created>1561277956197</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1561277956197</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83684000" />
+    <option name="totallyTimeSpent" value="85047000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="0" width="722" height="805" extended-state="0" />
@@ -567,7 +574,8 @@
     <MESSAGE value="0623 - Update ROW_SIZE &amp; COL_SIZE" />
     <MESSAGE value="0623 - Add plt.show()" />
     <MESSAGE value="0623 - Change $PATH" />
-    <option name="LAST_COMMIT_MESSAGE" value="0623 - Change $PATH" />
+    <MESSAGE value="0623 - Add approximately equal algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="0623 - Add approximately equal algorithm" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/model_build_B$test.coverage" NAME="test Coverage Results" MODIFIED="1561275617973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -696,8 +704,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="380">
+          <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
           <folding>
             <element signature="e#16#27#0" expanded="true" />
           </folding>
