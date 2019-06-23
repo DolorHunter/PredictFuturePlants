@@ -5,8 +5,8 @@ import file
 import forward
 import os
 
-BATCH_SIZE = 1                # 定义每轮喂入神经网络多少张图片
-LEARNING_RATE_BASE = 0.5      # 学习率
+BATCH_SIZE = 8                # 定义每轮喂入神经网络多少张图片
+LEARNING_RATE_BASE = 0.01     # 学习率
 LEARNING_RATE_DECAY = 0.99    # 衰减率
 REGULARIZER = 0.001           # 正则化系数
 STEPS = 30000                 # 训练轮数
@@ -53,16 +53,19 @@ def backward():
         if ckpt and ckpt.model_checkpoint_path:
             saver.restore(sess, ckpt.model_checkpoint_path)
 
+        img_num = 0
+
         for i in range(STEPS):  # 用for循环迭代steps轮
             # 每次读入图片和序号，喂入神经网络进行训练
-            xs = file.label_image_z1((STEPS % file.Z1_IMAGE) + 1)
-            ys = file.arr_image_z1((STEPS % file.Z1_IMAGE) + 1)
+            xs = file.label_image_z1((img_num % file.Z1_IMAGE) + 1)
+            ys = file.arr_image_z1((img_num % file.Z1_IMAGE) + 1)
+            img_num += 1
             # 训练，得到损失和步骤，输入为xs, ys
             _, loss_value, step = sess.run([train_op, loss, global_step],
                                            feed_dict={x: xs, y_: ys})
 
-            print("After %d training steps, loss on training batch is %g" % (step, loss_value))
-            if i % 1000 == 0:
+            if i % 500 == 0:
+                print("After %d training steps, loss on training batch is %g" % (step, loss_value))
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME), global_step=global_step)
     return loss_value
 

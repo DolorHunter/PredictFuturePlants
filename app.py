@@ -13,7 +13,7 @@ def restore_model(time):
 		x = tf.placeholder(tf.float32, [None, forward.INPUT_NODE])
 		y = forward.forward(x, None)
 
-		variable_averages = tf.trainExponentialMovingAverage(backward.MOVING_AVERAGE_DEcAY)
+		variable_averages = tf.trainExponentialMovingAverage(backward.MOVING_AVERAGE_DECAY)
 		variables_to_restore = variable_averages.variables_to_restore()
 		saver = tf.train.Saver(variables_to_restore)
 
@@ -36,15 +36,14 @@ def image_arr(time):
 	matrix = matrix.reshape([1, file.TIME_SIZE])
 	matrix.astype(np.float32)
 	arr = restore_model(matrix)
-	arr = arr.reshape([1200*1200])
+	arr = arr.resize([1200*1200])
 	arr_ready = np.multiply(arr, 255)
 	im = Image.fromarray(arr_ready)
 	im.save(file.Z1_LOC + time + ".tif")
 
 
 def main():
-	time = 1  # 1 for test
-	# int(input("Input the time:"))
+	time = 1  # int(input("Input the time:"))
 	image_arr(time)
 
 

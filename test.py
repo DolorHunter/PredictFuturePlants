@@ -20,7 +20,8 @@ def test():
 		ema_restore = ema.variables_to_restore()
 		saver = tf.train.Saver(ema_restore)
 		# tf.argmax(y, 1), tf.argmax(y_, 1)
-		correct_prediction = tf.equal(y_[0, :], y[0, :])  # 和相等即为预测正确
+		#for i in range(file.ROW_SIZE * file.COL_SIZE):
+		correct_prediction = tf.equal(y_[:], y[:])  # 和相等即为预测正确
 		accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 		while True:
@@ -29,17 +30,8 @@ def test():
 				if ckpt and ckpt.model_checkpoint_path:
 					saver.restore(sess, ckpt.model_checkpoint_path)
 					global_step = ckpt.model_checkpoint_path.split('/')[-1].split('-')[-1]
-					'''
-					# 测试集数据计算准确度
-					accuracy = 0
-					for i in range(1, file.Z1_TEST_IMAGE + 1):
-						test_label = file.label_image_z1(file.Z1_IMAGE + i)
-						test_image = file.arr_image_z1(file.Z1_IMAGE + i)
-						y = forward.forward(test_label, None)
-						if test_image[int(y)] == 1:
-							accuracy += 1
-					accuracy_score = accuracy / file.Z1_TEST_IMAGE
-					'''
+
+
 					xs_test_label = file.label_image_z1(file.Z1_TEST_IMAGE)
 					ys_test_image = file.arr_image_z1(file.Z1_TEST_IMAGE)
 					accuracy_score = sess.run(accuracy, feed_dict={x: xs_test_label, y_: ys_test_image})
