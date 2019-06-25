@@ -1,8 +1,11 @@
-﻿# Predict Future Plant
+﻿# Predict Future Plants
 
 **区域植被指数分析与物候预测**
-- [在线论文](https://github.com/DolorHunter/model_build_B/blob/master/essay/%E5%8C%BA%E5%9F%9F%E6%A4%8D%E8%A2%AB%E6%8C%87%E6%95%B0%E5%88%86%E6%9E%90%E4%B8%8E%E7%89%A9%E5%80%99%E9%A2%84%E6%B5%8B.pdf)
-- [论文下载](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/DolorHunter/model_build_B/blob/master/essay/%E5%8C%BA%E5%9F%9F%E6%A4%8D%E8%A2%AB%E6%8C%87%E6%95%B0%E5%88%86%E6%9E%90%E4%B8%8E%E7%89%A9%E5%80%99%E9%A2%84%E6%B5%8B.pdf)
+
+本项目为2019合肥工业大学(宣城校区)建模校赛B题
+
+- [在线论文](essay/区域植被指数分析与物候预测.pdf)
+- [论文下载](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/DolorHunter/PredictFuturePlants/blob/master/essay/区域植被指数分析与物候预测.pdf)
 
 **设计:**
 
