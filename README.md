@@ -1,8 +1,11 @@
 ﻿# Predict Future Plants
 
-**区域植被指数分析与物候预测**
+[![LICENSE](https://img.shields.io/badge/License-Apache--2.0-blue.svg?style=flat-square)](LICENSE)
+[![Tensorflow](https://img.shields.io/badge/Tensorflow-1.13.1-yellow.svg?style=flat-square)](https://github.com/tensorflow)
+[![Python3](https://img.shields.io/badge/Python-3.7.3-green.svg?style=flat-square)](https://github.com/topics/python)
+[![Size](https://img.shields.io/badge/Size-31.4MB-%23ff4D5B.svg?style=flat-square)](https://github.com/DolorHunter/PredictFuturePlants/archive/master.zip)
 
-本项目为2019合肥工业大学(宣城校区)建模校赛B题
+**区域植被指数分析与物候预测** - 2019合肥工业大学建模校赛B题
 
 - [在线论文](essay/区域植被指数分析与物候预测.pdf)
 - [论文下载](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/DolorHunter/PredictFuturePlants/blob/master/essay/区域植被指数分析与物候预测.pdf)
